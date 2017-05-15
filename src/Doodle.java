@@ -35,9 +35,15 @@ public class Doodle extends JPanel{
 	
 	private int frameWidth = 1484;
 	private int frameHeight = 530;
+	private Balloon b1 = new Balloon(100,20);
+	private Balloon b2 = new Balloon(700,40);
+	
+	private Balloon b3 = new Balloon(1300,40);
+
+
 
 	public Doodle(){
-
+		
 		try { 
 			BG = ImageIO.read(getClass().getResource("/BG.png"));
 		} catch (IOException e) { 
@@ -73,11 +79,7 @@ public class Doodle extends JPanel{
 		} catch (IOException e) { 
 			System.err.println("Turbines.png could not be found");
 		}
-		try { 
-			balloon = ImageIO.read(getClass().getResource("/Balloon.png"));
-		} catch (IOException e) { 
-			System.err.println("Balloon.png could not be found");
-		}
+		
 	}
 	public void move(){
 		carX-=2;
@@ -111,9 +113,12 @@ public class Doodle extends JPanel{
 		w1.paint(g2d);
 		
 		g2d.drawImage(Landscape, 0, 0, null);
-		//g2d.drawImage(balloon, 0, 0, null);
+		b1.paint(g2d);
 		g2d.drawImage(clouds, (int) cloudX, 0, null);
+		b2.paint(g2d);
 		g2d.drawImage(clouds, (int) cloudX + 1484, 0, null);
+		b3.paint(g2d);
+
 		g2d.drawImage(logo, 0, 0, null);
 
 	}	
