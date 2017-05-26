@@ -105,7 +105,10 @@ public class Doodle extends JPanel{
 		car2.paint(g2d);
 		car3.paint(g2d);
 		car4.paint(g2d);
-
+		g2d.drawImage(clouds, (int) cloudX, 0, null);
+		g2d.drawImage(clouds, (int) cloudX + 1484, 0, null);
+		g2d.setColor(new Color(0,0,0, 25));
+		g2d.fillRect(0, 0, frameWidth, frameHeight);
 		//g2d.drawImage(cars, carX, 0, null);
 		g2d.drawImage(train, trainX, 0, null);
 		w3.paint(g2d);
@@ -113,11 +116,11 @@ public class Doodle extends JPanel{
 		w1.paint(g2d);
 		
 		g2d.drawImage(Landscape, 0, 0, null);
-		b1.paint(g2d);
-		g2d.drawImage(clouds, (int) cloudX, 0, null);
-		b2.paint(g2d);
-		g2d.drawImage(clouds, (int) cloudX + 1484, 0, null);
-		b3.paint(g2d);
+		//b1.paint(g2d);
+		//g2d.drawImage(clouds, (int) cloudX, 0, null);
+		//b2.paint(g2d);
+		//g2d.drawImage(clouds, (int) cloudX + 1484, 0, null);
+		//b3.paint(g2d);
 
 		g2d.drawImage(logo, 0, 0, null);
 
